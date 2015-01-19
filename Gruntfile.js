@@ -29,11 +29,11 @@ module.exports = function(grunt) {
                     dot: true,
                     nonull: true,
                     src: [
-                        '<%= config.app %>/_ui/css'
-                        ,'<%= config.devcode %>/dev/**/*.*'
-                        ,'<%= config.dist %>/_service/**/*.*'
-                        ,'!<%= config.dist %>/_ui/images/**/*.*'
-                        //,'!<%= config.dist %>/fonts/**/*.*'
+                        '<%= config.app %>/css'
+                        '<%= config.devcode %>/**/*.*',
+                        '!<%= config.dist %>/_service/**/*.*',
+                        '!<%= config.dist %>/_ui/images/**/*.*',
+                        //'!<%= config.dist %>/fonts/**/*.*'
                     ]
                 }]
             },
@@ -71,8 +71,8 @@ module.exports = function(grunt) {
                 options: {
                     map: true
                 },
-                // src: '<%= config.app %>/css/style.css'
-                src: '<%= less.docs.dest %>'
+                 src: '<%= config.app %>/css/style.css'
+                //src: '<%= less.docs.dest %>'
             }
         },
 
@@ -102,8 +102,8 @@ module.exports = function(grunt) {
             options: {
                 compatibility: 'ie8',
                 keepSpecialComments: '*',
-                noAdvanced: true,
-                banner: ' <%= banner %> '
+                noAdvanced: true
+                //banner: ' <%= banner %> '
             },
 
             docs: {
@@ -114,7 +114,8 @@ module.exports = function(grunt) {
 
         jshint: {
             options: {
-                jshintrc: '<%= config.gruntfile %>/.jshintrc'
+                jshintrc: '<%= config.custom %>/.jshintrc',
+                reporter: require('jshint-stylish')
             },
             grunt: {
                 src: ['Gruntfile.js']
@@ -144,9 +145,9 @@ module.exports = function(grunt) {
         uglify: {
             options: {
                 preserveComments: 'some', // 코멘트 없음
-                sourceMap: true,
+                sourceMap: true
                 // sourceMapIncludeSources: true
-                banner: '<%= banner %>'
+                //banner: '<%= banner %>'
             },
 
             docs: {
@@ -241,7 +242,7 @@ module.exports = function(grunt) {
             build: {
                 cwd: '<%= config.app %>/html/docs/',
                 src: ['**/*.html'],
-                dest: '<%= config.dist %>',
+                dest: '<%= config.dist %>/_include/',
                 options: {
                     flatten: true,
                     includePath: '<%= config.app %>/html/include/'
@@ -294,63 +295,63 @@ module.exports = function(grunt) {
                         src: '<%= config.bower %>/jquery/jquery.min.js',
                         dest: '<%= config.dist %>/_ui/js/lib/jquery.min.js'
                     },
-                    // // jquery ui
-                    // {
-                    //     nonull: true,
-                    //     src: '<%= config.bower %>/jquery-ui/jquery-ui.min.js',
-                    //     dest: '<%= config.dist %>/_ui/js/plugins/jquery-ui/jquery-ui.min.js'
-                    // },
-                    // // bxSlider
-                    // {
-                    //     expand: true,
-                    //     dot: true,
-                    //     cwd: '<%= config.bower %>/bxSlider/',
-                    //     src: ['**','!*.json'],
-                    //     dest: '<%= config.dist %>/_ui/js/plugins/bxSlider/'
-                    // },
-                    // // magnific-popup
-                    // {
-                    //     expand: true,
-                    //     dot: true,
-                    //     cwd: '<%= config.bower %>/magnific-popup/dist/',
-                    //     src: ['**'],
-                    //     dest: '<%= config.dist %>/_ui/js/plugins/magnific-popup/'
+                     // jquery ui
+                     {
+                         nonull: true,
+                         src: '<%= config.bower %>/jquery-ui/jquery-ui.min.js',
+                         dest: '<%= config.dist %>/_ui/js/lib/jquery-ui/jquery-ui.min.js'
+                     },
+                     // bxSlider
+                     {
+                         expand: true,
+                         dot: true,
+                         cwd: '<%= config.bower %>/bxSlider/',
+                         src: ['**','!*.json'],
+                         dest: '<%= config.dist %>/_ui/js/plugins/bxSlider/'
+                     },
+                     // magnific-popup
+                     {
+                         expand: true,
+                         dot: true,
+                         cwd: '<%= config.bower %>/magnific-popup/dist/',
+                         src: ['**'],
+                         dest: '<%= config.dist %>/_ui/js/plugins/magnific-popup/'
 
-                    // },
-                    // // angular
-                    // {
-                    //     nonull: true,
-                    //     src: '<%= config.bower %>/angular/angular.min.js',
-                    //     dest: '<%= config.dist %>/_ui/js/plugins/angular/angular.min.js'
-                    // },
-                    // // modernizr
-                    // {
-                    //     nonull: true,
-                    //     src: '<%= config.bower %>/modernizr/modernizr.js',
-                    //     dest: '<%= config.dist %>/_ui/js/plugins/modernizr/modernizr.js'
-                    // },
-                    // // masonry
-                    // {
-                    //     nonull: true,
-                    //     src: '<%= config.bower %>/masonry/dist/masonry.pkgd.min.js',
-                    //     dest: '<%= config.dist %>/_ui/js/plugins/masonry/masonry.pkgd.min.js'
-                    // },
-                    // // FlexSlider
-                    // {
-                    //     expand: true,
-                    //     dot: true,
-                    //     cwd: '<%= config.bower %>/FlexSlider/',
-                    //     src: ['**','!*.json','!*.txt','!*.md','!*.mdown'],
-                    //     dest: '<%= config.dist %>/_ui/js/plugins/FlexSlider/'
-                    // },
+                     },
+                     // angular
+                     {
+                         nonull: true,
+                         src: '<%= config.bower %>/angular/angular.min.js',
+                         dest: '<%= config.dist %>/_ui/js/plugins/angular/angular.min.js'
+                     },
+                     // modernizr
+                     {
+                         nonull: true,
+                         src: '<%= config.bower %>/modernizr/modernizr.js',
+                         dest: '<%= config.dist %>/_ui/js/plugins/modernizr/modernizr.js'
+                     },
+                     // masonry
+                     {
+                         nonull: true,
+                         src: '<%= config.bower %>/masonry/dist/masonry.pkgd.min.js',
+                         dest: '<%= config.dist %>/_ui/js/plugins/masonry/masonry.pkgd.min.js'
+                     },
+                     // FlexSlider
+                     {
+                         expand: true,
+                         dot: true,
+                         cwd: '<%= config.bower %>/FlexSlider/',
+                         src: ['**','!*.json','!*.txt','!*.md','!*.mdown'],
+                         dest: '<%= config.dist %>/_ui/js/plugins/FlexSlider/'
+                     },
                     // bootstrap
-                    //{
-                    //    expand: true,
-                    //    cwd: '<%= config.bower %>/bootstrap/dist/',
-                    //    src: ['**','!npm.js'],
-                    //    dest: '<%= config.dist %>/_ui/js/plugins/bootstrap/'
+                    {
+                        expand: true,
+                        cwd: '<%= config.bower %>/bootstrap/dist/',
+                        src: ['**','!npm.js'],
+                        dest: '<%= config.dist %>/_ui/js/plugins/bootstrap/'
 
-                    //}
+                    }
                 ]
             },
         },
