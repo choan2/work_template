@@ -343,6 +343,7 @@ module.exports = function(grunt) {
                     //     src: ['**','!*.json','!*.txt','!*.md','!*.mdown'],
                     //     dest: '<%= config.dist %>/_ui/js/plugins/FlexSlider/'
                     // },
+                    
                     // bootstrap
                     {
                         expand: true,
