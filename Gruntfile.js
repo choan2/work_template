@@ -29,7 +29,7 @@ module.exports = function(grunt) {
                     dot: true,
                     nonull: true,
                     src: [
-                        '<%= config.app %>/css'
+                        '<%= config.app %>/css',
                         '<%= config.devcode %>/**/*.*',
                         '!<%= config.dist %>/_service/**/*.*',
                         '!<%= config.dist %>/_ui/images/**/*.*',
