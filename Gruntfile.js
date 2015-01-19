@@ -241,7 +241,7 @@ module.exports = function(grunt) {
             build: {
                 cwd: '<%= config.app %>/html/docs/',
                 src: ['**/*.html'],
-                dest: '<%= config.dist %>/_include/',
+                dest: '<%= config.dist %>/_service/',
                 options: {
                     flatten: true,
                     includePath: '<%= config.app %>/html/include/'
