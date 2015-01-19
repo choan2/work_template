@@ -213,7 +213,7 @@ module.exports = function(grunt) {
                     livereload: 35729,
                     // keepalive: true,
                     base: '<%= config.dist %>',
-                    open: 'http://<%= connect.server.options.hostname %>:<%= connect.server.options.port %>/_service/index.html'
+                    open: 'http://<%= connect.server.options.hostname %>:<%= connect.server.options.port %>/_service/test-html/index.html'
                 }
             }
         },
