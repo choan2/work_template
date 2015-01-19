@@ -114,8 +114,7 @@ module.exports = function(grunt) {
 
         jshint: {
             options: {
-                jshintrc: '<%= config.custom %>/.jshintrc',
-                reporter: require('jshint-stylish')
+                jshintrc: '<%= config.gruntfile %>/.jshintrc'
             },
             grunt: {
                 src: ['Gruntfile.js']
