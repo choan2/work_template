@@ -43,11 +43,11 @@ module.exports = function(grunt) {
             docs: {
                 options: {
                     //banner: '<%= banner %>'
-                    strictMath: true
-                    ,sourceMap: true
-                    ,outputSourceFiles: true
-                    ,sourceMapURL: 'style.css.map'
-                    ,sourceMapFilename: '<%= config.dist %>/_ui/css/style.css.map'
+                    strictMath: true,
+                    sourceMap: true,
+                    outputSourceFiles: true,
+                    sourceMapURL: 'style.css.map',
+                    sourceMapFilename: '<%= config.dist %>/_ui/css/style.css.map'
                 },
                 src: '<%= config.app %>/less/style.less',
                 dest: '<%= config.app %>/css/style.css'
