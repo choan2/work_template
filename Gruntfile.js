@@ -294,55 +294,55 @@ module.exports = function(grunt) {
                         src: '<%= config.bower %>/jquery/jquery.min.js',
                         dest: '<%= config.dist %>/_ui/js/lib/jquery.min.js'
                     },
-                     // jquery ui
-                     {
-                         nonull: true,
-                         src: '<%= config.bower %>/jquery-ui/jquery-ui.min.js',
-                         dest: '<%= config.dist %>/_ui/js/lib/jquery-ui/jquery-ui.min.js'
-                     },
-                     // bxSlider
-                     {
-                         expand: true,
-                         dot: true,
-                         cwd: '<%= config.bower %>/bxSlider/',
-                         src: ['**','!*.json'],
-                         dest: '<%= config.dist %>/_ui/js/plugins/bxSlider/'
-                     },
-                     // magnific-popup
-                     {
-                         expand: true,
-                         dot: true,
-                         cwd: '<%= config.bower %>/magnific-popup/dist/',
-                         src: ['**'],
-                         dest: '<%= config.dist %>/_ui/js/plugins/magnific-popup/'
+                    // // jquery ui
+                    // {
+                    //     nonull: true,
+                    //     src: '<%= config.bower %>/jquery-ui/jquery-ui.min.js',
+                    //     dest: '<%= config.dist %>/_ui/js/lib/jquery-ui/jquery-ui.min.js'
+                    // },
+                    // // bxSlider
+                    // {
+                    //     expand: true,
+                    //     dot: true,
+                    //     cwd: '<%= config.bower %>/bxSlider/',
+                    //     src: ['**','!*.json'],
+                    //     dest: '<%= config.dist %>/_ui/js/plugins/bxSlider/'
+                    // },
+                    // // magnific-popup
+                    // {
+                    //     expand: true,
+                    //     dot: true,
+                    //     cwd: '<%= config.bower %>/magnific-popup/dist/',
+                    //     src: ['**'],
+                    //     dest: '<%= config.dist %>/_ui/js/plugins/magnific-popup/'
 
-                     },
-                     // angular
-                     {
-                         nonull: true,
-                         src: '<%= config.bower %>/angular/angular.min.js',
-                         dest: '<%= config.dist %>/_ui/js/plugins/angular/angular.min.js'
-                     },
-                     // modernizr
-                     {
-                         nonull: true,
-                         src: '<%= config.bower %>/modernizr/modernizr.js',
-                         dest: '<%= config.dist %>/_ui/js/plugins/modernizr/modernizr.js'
-                     },
-                     // masonry
-                     {
-                         nonull: true,
-                         src: '<%= config.bower %>/masonry/dist/masonry.pkgd.min.js',
-                         dest: '<%= config.dist %>/_ui/js/plugins/masonry/masonry.pkgd.min.js'
-                     },
-                     // FlexSlider
-                     {
-                         expand: true,
-                         dot: true,
-                         cwd: '<%= config.bower %>/FlexSlider/',
-                         src: ['**','!*.json','!*.txt','!*.md','!*.mdown'],
-                         dest: '<%= config.dist %>/_ui/js/plugins/FlexSlider/'
-                     },
+                    // },
+                    // // angular
+                    // {
+                    //     nonull: true,
+                    //     src: '<%= config.bower %>/angular/angular.min.js',
+                    //     dest: '<%= config.dist %>/_ui/js/plugins/angular/angular.min.js'
+                    // },
+                    // // modernizr
+                    // {
+                    //     nonull: true,
+                    //     src: '<%= config.bower %>/modernizr/modernizr.js',
+                    //     dest: '<%= config.dist %>/_ui/js/plugins/modernizr/modernizr.js'
+                    // },
+                    // // masonry
+                    // {
+                    //     nonull: true,
+                    //     src: '<%= config.bower %>/masonry/dist/masonry.pkgd.min.js',
+                    //     dest: '<%= config.dist %>/_ui/js/plugins/masonry/masonry.pkgd.min.js'
+                    // },
+                    // // FlexSlider
+                    // {
+                    //     expand: true,
+                    //     dot: true,
+                    //     cwd: '<%= config.bower %>/FlexSlider/',
+                    //     src: ['**','!*.json','!*.txt','!*.md','!*.mdown'],
+                    //     dest: '<%= config.dist %>/_ui/js/plugins/FlexSlider/'
+                    // },
                     // bootstrap
                     {
                         expand: true,
