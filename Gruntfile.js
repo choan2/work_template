@@ -189,13 +189,13 @@ module.exports = function(grunt) {
                     livereload: true,
                 }
             },
-            jade: {
-                files: ['<%= config.app %>/jade/**/*.jade'],
-                tasks: ['jade'],
-                options: {
-                    livereload: true,
-                }
-            },
+           //jade: {
+           //    files: ['<%= config.app %>/jade/**/*.jade'],
+           //    tasks: ['jade'],
+           //    options: {
+           //        livereload: true,
+           //    }
+           //},
             img: {
                 files: ['<%= config.app %>/images/**/*.{gif,jpeg,jpg,png}'],
                 tasks: ['newer:imagemin'],
@@ -218,23 +218,23 @@ module.exports = function(grunt) {
             }
         },
 
-        jade: {
-            dynamic_mappings: {
-                options: {
-                    client: false,
-                    pretty: true
-                },
-                files: [
-                    {
-                        expand: true,                            // 동적 기술법을 활성화.
-                        cwd   : '<%= config.app %>/jade/docs/',  // Src 패턴의 기준 폴더.
-                        src   : ['**/*.jade'],                   // 비교에 사용할 패턴 목록.
-                        dest  : '<%= config.dist %>/_service/',            // 목적 경로의 접두사(사실상 폴더명)
-                        ext   : '.html',                         // dest의 파일들의 확장자.
-                    },
-                ],
-            },
-        },
+        // jade: {
+        //     dynamic_mappings: {
+        //         options: {
+        //             client: false,
+        //             pretty: true
+        //         },
+        //         files: [
+        //             {
+        //                 expand: true,                            // 동적 기술법을 활성화.
+        //                 cwd   : '<%= config.app %>/jade/docs/',  // Src 패턴의 기준 폴더.
+        //                 src   : ['**/*.jade'],                   // 비교에 사용할 패턴 목록.
+        //                 dest  : '<%= config.dist %>/_service/',            // 목적 경로의 접두사(사실상 폴더명)
+        //                 ext   : '.html',                         // dest의 파일들의 확장자.
+        //             },
+        //         ],
+        //     },
+        // },
 
 
         includes: {
