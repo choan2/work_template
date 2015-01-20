@@ -363,13 +363,13 @@ module.exports = function(grunt) {
             },
             dev: [
                 'includes',
-                'jade',
+                //'jade',
                 'newer:imagemin',
                 'copy:dev'
             ],
             build: [
                 'includes',
-                'jade',
+                //'jade',
                 'newer:imagemin',
                 'copy'
             ]
