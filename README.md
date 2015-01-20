@@ -4,6 +4,7 @@ SourceCode/ 에서 작업을 하면 FinishCode/ 으로 산출물이 만들어집
 
 ## 폴더구조
 
+```
 ┌── FinishCode/      (산출물폴더 : 자동생성)
 │ ├── /_service
 │ │            └─test-html ( html 작업페이지 샘플 )
@@ -36,6 +37,7 @@ SourceCode/ 에서 작업을 하면 FinishCode/ 으로 산출물이 만들어집
 ├── package.json (프로젝트 설정파일)
 └── README.md (참조 문서)
 
+```
 
 ## 요구사항 설치
 1. 버전관리 : [git설치](http://msysgit.github.io/)
