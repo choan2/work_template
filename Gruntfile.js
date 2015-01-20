@@ -131,7 +131,7 @@ module.exports = function(grunt) {
                     separator: ';',
                     // stripBanners: true,
                     // sourceMap: true,
-                    // sourceMapName: '<%= config.app %>/js/plugins.js.map',
+                    // sourceMapName: '<%= config.app %>/js/plugin.js.map',
                     // banner: '<%= banner %>'
                 },
                 src: [
@@ -306,7 +306,7 @@ module.exports = function(grunt) {
                     //     dot: true,
                     //     cwd: '<%= config.bower %>/bxSlider/',
                     //     src: ['**','!*.json'],
-                    //     dest: '<%= config.dist %>/_ui/js/plugins/bxSlider/'
+                    //     dest: '<%= config.dist %>/_ui/js/plugin/bxSlider/'
                     // },
                     // // magnific-popup
                     // {
@@ -314,26 +314,26 @@ module.exports = function(grunt) {
                     //     dot: true,
                     //     cwd: '<%= config.bower %>/magnific-popup/dist/',
                     //     src: ['**'],
-                    //     dest: '<%= config.dist %>/_ui/js/plugins/magnific-popup/'
+                    //     dest: '<%= config.dist %>/_ui/js/plugin/magnific-popup/'
 
                     // },
                     // // angular
                     // {
                     //     nonull: true,
                     //     src: '<%= config.bower %>/angular/angular.min.js',
-                    //     dest: '<%= config.dist %>/_ui/js/plugins/angular/angular.min.js'
+                    //     dest: '<%= config.dist %>/_ui/js/plugin/angular/angular.min.js'
                     // },
                     // // modernizr
                     // {
                     //     nonull: true,
                     //     src: '<%= config.bower %>/modernizr/modernizr.js',
-                    //     dest: '<%= config.dist %>/_ui/js/plugins/modernizr/modernizr.js'
+                    //     dest: '<%= config.dist %>/_ui/js/plugin/modernizr/modernizr.js'
                     // },
                     // // masonry
                     // {
                     //     nonull: true,
                     //     src: '<%= config.bower %>/masonry/dist/masonry.pkgd.min.js',
-                    //     dest: '<%= config.dist %>/_ui/js/plugins/masonry/masonry.pkgd.min.js'
+                    //     dest: '<%= config.dist %>/_ui/js/plugin/masonry/masonry.pkgd.min.js'
                     // },
                     // // FlexSlider
                     // {
@@ -341,7 +341,7 @@ module.exports = function(grunt) {
                     //     dot: true,
                     //     cwd: '<%= config.bower %>/FlexSlider/',
                     //     src: ['**','!*.json','!*.txt','!*.md','!*.mdown'],
-                    //     dest: '<%= config.dist %>/_ui/js/plugins/FlexSlider/'
+                    //     dest: '<%= config.dist %>/_ui/js/plugin/FlexSlider/'
                     // },
                     
                     // bootstrap
@@ -349,7 +349,7 @@ module.exports = function(grunt) {
                         expand: true,
                         cwd: '<%= config.bower %>/bootstrap/dist/',
                         src: ['**','!npm.js'],
-                        dest: '<%= config.dist %>/_ui/js/plugins/bootstrap/'
+                        dest: '<%= config.dist %>/_ui/js/plugin/bootstrap/'
 
                     }
                 ]
