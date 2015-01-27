@@ -8,3 +8,92 @@
 ---------------------------------------------------------------
 */
 
+@charset "utf-8";
+
+.space_reset {margin: 0;padding: 0;border: 0;}
+.font_reset {font-size: 100%; font: inherit;vertical-align: baseline;}
+
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video 
+{
+.space_reset;
+.font_reset;      
+} 
+/* HTML5 display-role reset for older browsers */ 
+article, aside, details, figcaption, figure,  
+footer, header, hgroup, menu, nav, section { 
+    display: block; 
+} 
+body { 
+    line-height: 1; 
+} 
+ol, ul { 
+    list-style: none; 
+} 
+blockquote, q { 
+    quotes: none; 
+} 
+blockquote {
+    &:before, &:after {
+        content: '';
+        content:none;
+    }
+}
+table { 
+    border-collapse: collapse; 
+    border-spacing: 0; 
+}
+img,input,select,button{
+    vertical-align:middle;
+}
+label,button{
+    cursor:pointer;
+}
+img,embed,object,video{
+    max-width:100%;
+}
+i,em,address{
+    font-style:normal;
+}
+abbr[title],dfn[title]{
+    border-bottom:1px dotted;
+    cursor:help;
+}
+del{
+    text-decoration:line-through;
+}
+hr{
+    display:none;
+}
+caption{
+    visibility:hidden; 
+    overflow:hidden; 
+    width:1px; 
+    height:1px; 
+    font-size:0; 
+    line-height:0;
+}
+
+/* mobile pos:a issue */
+legend,
+.hiddenConts{
+    overflow:hidden; 
+    position:absolute; 
+    top:-9999px; 
+    width:1px; 
+    height:1px; 
+    line-height:0; 
+    text-indent:-9999px;
+}
+.clearfix {
+    display:inline-block;
+    display:block;
+    &:after {
+        content:"."; 
+        display:block; 
+        height:0; 
+        clear:both; 
+        visibility:hidden;
+    }
+}
+*html .clearfix {height:1%;}
