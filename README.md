@@ -43,7 +43,7 @@ SourceCode/ 에서 작업을 하면 FinishCode/ 으로 산출물이 만들어집
 1. 버전관리 : [git설치](http://msysgit.github.io/)
 	`설치시 필수 옵션 체크 - Run Git from the Window Command Prompt` 
 2. [node.js](http://nodejs.org/)  : [http://nodejs.org/](http://nodejs.org/) 설치파일 다운후 설치
-3. [bower](http://bower.io/)    : `윈도우키` ＞ `실행` ＞ `cmd` ＞ `npm install bower -g` 
+3. [bower](http://bower.io/)    : `윈도우키` ＞ `실행` ＞ `cmd` ＞ `npm install bower -g` (sudo npm install bower -g : Mac )
 4. [grunt](http://gruntjs.com/)    : `윈도우키` ＞ `실행` ＞ `cmd` ＞ `npm install grunt-cli -g`
 5. nexbrain template    : `윈도우키` ＞ `실행` ＞ `cmd` ＞ `nex_template.sh 생성폴더명`
 
